@@ -20,10 +20,18 @@ public:
 		int res = 1;
 		while (b)
 		{
-			if (b & 1)res = (res * a) % m;
+            //cout<<(b & 1)<<endl;
+			if (b & 1) {
+                res = (res * a) % m;
+            }
 			a = (a % m) * (a % m) % m;
 			b >>= 1;
+            //cout<<"b "<<b<<endl;
 		}
+		//上面的while与下面结果一致，利用对指数右移（除2）并对右移后的指数进行奇偶判断，以a的2次方为递乘单元，降低时间复杂度
+        // while (b--) {
+        //     res = (res * (a % m)) % m;
+        // }
 		return res;
 	}
 	int superPow(int a, vector<int>& b) {
@@ -34,3 +42,5 @@ public:
 		return res;
 	}
 };
+
+
