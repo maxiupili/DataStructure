@@ -1,2 +1,2 @@
-# DataStructure
-data structure
+# DataStructure and LeetCode
+data structure and LeetCode
