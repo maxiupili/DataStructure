@@ -38,7 +38,7 @@ public:
         }
         //cout<< head->val;
         ListNode *pLF, *pMV;
-        ListNode *head2 = new ListNode(0);
+        ListNode *head2 = new ListNode(0); //新的空头部用来指向第一个元素
         head2->next = ((head != NULL)? head : NULL);
         int flag = 0;
         pLF = head2;
