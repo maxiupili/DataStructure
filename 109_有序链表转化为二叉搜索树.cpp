@@ -35,20 +35,20 @@
  */
 class Solution {
 public:
-    TreeNode* sortedListToBST(ListNode* head) {
+    TreeNode *sortedListToBST(ListNode *head) {
         vector<int> v;
-        while(head != nullptr){
+        while (head != nullptr) {
             v.push_back(head->val);
             head = head->next;
         }
         return buildTree(v, 0, v.size());
     }
-    TreeNode * buildTree(vector<int> & v, int begin, int end){
+    TreeNode *buildTree(vector<int> &v, int begin, int end){
         if(begin == end) return nullptr;
-        int middle = (begin+end)/2;
+        int middle = (begin + end) / 2;
         TreeNode * root = new TreeNode(v[middle]);
         root->left = buildTree(v, begin, middle);
-        root->right = buildTree(v, middle+1, end);
+        root->right = buildTree(v, middle + 1, end);
         return root;
     }
 };
