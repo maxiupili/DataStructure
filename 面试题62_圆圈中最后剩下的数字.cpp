@@ -22,6 +22,7 @@
 
 */
 //递归
+/*
 class Solution {
     int f(int n, int m) {
         if (n == 1)
@@ -34,6 +35,7 @@ public:
         return f(n, m);
     }
 };
+*/
 //迭代
 /*
 class Solution {
@@ -59,6 +61,7 @@ public:
 ........
 迭代推理到n就可以得出答案
 
+*/
 class Solution {
 public:
     int lastRemaining(int n, int m) {
@@ -69,5 +72,3 @@ public:
         return result;
     }
 };
-
-*/
