@@ -54,7 +54,7 @@ public:
         if (it == key_table.end()) return -1;
         // 从哈希表中得到旧的缓存
         Node cache = it -> second;
-        // 从平衡二叉树中删除旧的缓存
+        // 从平衡二叉树中删除旧的缓存   先删去后添加保证cnt和time更新后set有序
         S.erase(cache);
         // 将旧缓存更新
         cache.cnt += 1;
