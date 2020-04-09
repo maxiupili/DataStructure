@@ -14,6 +14,7 @@
        "()()()"
      ]
 
+
 */
 class Solution {
     void backtrack(vector<string>& ans, string& cur, int open, int close, int n) {
