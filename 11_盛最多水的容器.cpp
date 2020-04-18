@@ -24,16 +24,13 @@ public:
         while (l != r) {
             if (height[l] < height[r]) {
                 tmp = (r - l) * height[l];
-                if (tmp > maxarea) {
-                    maxarea = tmp;
-                }
                 ++l;
             } else {
                 tmp = (r - l) * height[r];
-                if (tmp > maxarea) {
-                    maxarea = tmp;
-                }
                 --r;
+            }
+            if (tmp > maxarea) {
+                maxarea = tmp;
             }
         }
         return maxarea;
