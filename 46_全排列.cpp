@@ -17,9 +17,7 @@
 */
 class Solution {
 public:
-    void backtrack(vector<vector<int>>& res, vector<int>& output, int first, int len){
-        
-    }
+    
     vector<vector<int>> permute(vector<int>& nums) {
         vector<vector<int> > res;
         int n = nums.size();
