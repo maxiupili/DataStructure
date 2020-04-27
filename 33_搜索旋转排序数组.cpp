@@ -40,7 +40,7 @@ public:
         } else if (l >= r) {
             return -1;
         }
-        
+        //加判断的二分
         if (nums[l] <= target && nums[mid] > target) {
             return localTarget(nums, l, mid - 1, target);
         } else if (nums[l] <= target && nums[mid] < target && nums[l] < nums[mid]) {
